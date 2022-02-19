@@ -25,4 +25,6 @@
     service:定义方法
     rpc：方法名修饰符
     使用 protoc --go_out=plugins=grpc:…/services Prod.proto 命令生成pb.go文件，使用时要实现interface的GetProdStock方法
+## grpc服务的创建
+    可以创建rpc，http服务，使用grpc-gateway可以同步生成pb.go（用于rpc服务，监听tcp端口）和gw.pb.go（用于http请求）
    
