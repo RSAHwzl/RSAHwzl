@@ -21,20 +21,8 @@
 ## proto语法简介
     末尾;结尾（方法可不加）
     message:定义结构体（类似于go的struct）
+    repeated：定义数组
     service:定义方法
-    
-    `syntax = "proto3";//指定版本信息
-    package services;//定义包名
-    option go_package =" .; services";//要把package换option
-    //请求体参数
-    message ProdRequest{
-        int32 prod_id=1;l/传id
-    }
-    //请求返回参数
-    message ProdResponse{
-        int32 prod_stock=l;1/
-    }
-    //追加service服务
-    service Prodservice{
-        rpc GetProdstock(ProdRequest)returns(ProdResponse);
-    }`
+    rpc：方法名修饰符
+    使用 protoc --go_out=plugins=grpc:…/services Prod.proto 命令生成pb.go文件，使用时要实现interface的GetProdStock方法
+   
