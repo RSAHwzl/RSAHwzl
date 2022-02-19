@@ -31,4 +31,5 @@
     可以创建rpc，http服务，使用grpc-gateway可以同步生成pb.go（用于rpc服务，监听tcp端口）和gw.pb.go（用于http请求）
 ## grpc的流式服务
     对rpc请求方法操作，客户端流式服务（请求参数前+stream），服务端流式服务（返回值前+stream），双向流式服务（请求参数、返回值+stream）
+    stream方法：Send(),CloseSend(),Recv(),CloseAndRecv()等等
     
