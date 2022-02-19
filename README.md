@@ -13,4 +13,5 @@
     包括高效的序列号，简单的 IDL 以及容易进行接口更新。
     个人理解：可以写一套service，通过proto文件生成不同语言的代码执行。微服务中，可以分为几个模块执行，各个模块间异常情况互不干扰，
     各个模块可以使用不同的语言执行（可以利用不同语言的特点进行service最大化利用）
-## go的grpc环境搭建
+## goland的grpc环境搭建
+    1.先安装Protobuf 编译器 protoc，下载地址：https://github.com/google/protobuf/releases，解压缩得到protoc.exe（把proto编译成其他语言）
