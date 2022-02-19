@@ -18,3 +18,23 @@
     2.获取protobuf编解码支持库，go get -u github.com/golang/protobuf/proto
     3.编辑成go的插件，go get -u github.com/golang/protobuf/protoc-gen-go
     4.引入grpc支持，go get google.golang.org/grpc
+## proto语法简介
+    末尾;结尾（方法可不加）
+    message:定义结构体（类似于go的struct）
+    service:定义方法
+    
+    `syntax = "proto3";//指定版本信息
+    package services;//定义包名
+    option go_package =" .; services";//要把package换option
+    //请求体参数
+    message ProdRequest{
+        int32 prod_id=1;l/传id
+    }
+    //请求返回参数
+    message ProdResponse{
+        int32 prod_stock=l;1/
+    }
+    //追加service服务
+    service Prodservice{
+        rpc GetProdstock(ProdRequest)returns(ProdResponse);
+    }`
